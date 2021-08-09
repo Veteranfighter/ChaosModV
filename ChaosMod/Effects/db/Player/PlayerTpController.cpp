@@ -26,6 +26,18 @@ static RegisterEffect registerEffect2(EFFECT_TP_MAZETOWER, OnStartMazeTower, Eff
 		.EEffectGroupType = EEffectGroupType::Teleport
 	}
 );
+static void OnStartWater()
+{
+	TeleportPlayer(1812f, 48f, 100f);
+}
+
+static RegisterEffect registerEffect2(EFFECT_TP_WATER, OnStartWater, EffectInfo
+	{
+		.Name = "Where the fuck am I?",
+		.Id = "tp_waterr",
+		.EEffectGroupType = EEffectGroupType::Teleport
+	}
+);
 static void OnStartFortZancudo()
 {
 	if (!IS_PED_IN_ANY_VEHICLE(PLAYER_PED_ID(), false))
